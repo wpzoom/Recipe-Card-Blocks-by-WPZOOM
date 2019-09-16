@@ -77,6 +77,7 @@ class WPZOOM_Settings_Fields {
 	 */
 	public function checkbox( $args ) {
 		$checked = self::parse_checkbox_field( $args );
+		$has_preview = isset( $args['preview'] ) && $args['preview'] === true;
 	?>
 		<fieldset class="wpzoom-rcb-field-checkbox">
 			<?php
@@ -92,6 +93,24 @@ class WPZOOM_Settings_Fields {
 					<?php echo $args['description']; ?>
 				<?php endif ?>
 			</label>
+
+            <?php if ( $has_preview ): ?>
+
+                <?php
+                $filename = WPZOOM_RCB_PLUGIN_DIR . 'dist/assets/images/previews/' . esc_attr( $args['label_for'] ) . '.png';
+                $preview_thumbnail_url = untrailingslashit( WPZOOM_RCB_PLUGIN_URL ) . '/dist/assets/images/previews/' . esc_attr( $args['label_for'] ) . '.png';
+
+                if ( file_exists( $filename ) ) {
+                    printf(
+                        '<span class="wpzoom-rcb-field-preview dashicons dashicons-visibility" data-preview-thumbnail="%s" title="%s"></span>',
+                        $preview_thumbnail_url,
+                        esc_html__( 'Preview', 'wpzoom-recipe-card' )
+                    );    
+                }
+                ?>
+
+            <?php endif ?>
+
 		</fieldset>
 	<?php
 	}

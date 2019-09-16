@@ -78,5 +78,41 @@ jQuery(document).ready(function(){
 		    }
 		    return vars;
 		}
+
+
+        // setting field preview
+        $('.wpzoom-rcb-field-preview').each(function(){
+            var $this = $(this),
+                $field = $(this).parents('fieldset');
+            var thumbnail = $(this).data('preview-thumbnail');
+
+            $(this).on('mouseover', function(){
+
+                if ( $this.hasClass('active') ) {
+                    $this.removeClass('active');
+                    $field.find('.wpzoom-rcb-field-preview-thumbnail').remove();
+                    return;
+                }
+
+                $this.addClass('active');
+                $field.append('<span class="wpzoom-rcb-field-preview-thumbnail"><img src="'+ thumbnail +'" width="400" height="300"></span>');
+
+                $('.wpzoom-rcb-field-preview').not(this).parent().find('.wpzoom-rcb-field-preview-thumbnail').remove();
+                $('.wpzoom-rcb-field-preview').not(this).removeClass('active');
+                
+            });
+
+            $(this).on('mouseout', function(){
+
+                if ( $this.hasClass('active') ) {
+                    $this.removeClass('active');
+                    $field.find('.wpzoom-rcb-field-preview-thumbnail').remove();
+                    return;
+                }
+
+            });
+
+        });
+
 	})(jQuery, WPZOOM_Settings);
 });

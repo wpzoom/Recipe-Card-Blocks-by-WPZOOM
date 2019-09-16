@@ -288,7 +288,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_course',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show course by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -299,7 +300,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_cuisine',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show cuisine by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -310,7 +312,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_difficulty',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show difficulty by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -321,7 +324,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_author',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show author by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -422,6 +426,7 @@ class WPZOOM_Settings {
 									'default'		=> true,
 									'disabled'		=> true,
 									'badge' 		=> $premium_badge,
+									'preview'		=> true,
 								)
 							),
 						)
@@ -440,7 +445,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_servings',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show servings by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -451,7 +457,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_preptime',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show preparation time by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -462,7 +469,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_cookingtime',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show cooking time by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 							array(
@@ -473,7 +481,8 @@ class WPZOOM_Settings {
 									'label_for' 	=> 'wpzoom_rcb_settings_display_calories',
 									'class' 		=> 'wpzoom-rcb-field',
 									'description' 	=> esc_html__( 'Show calories by default', 'wpzoom-recipe-card' ),
-									'default'		=> true
+									'default'		=> true,
+									'preview'		=> true,
 								)
 							),
 						)
