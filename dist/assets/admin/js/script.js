@@ -84,7 +84,8 @@ jQuery(document).ready(function(){
         $('.wpzoom-rcb-field-preview').each(function(){
             var $this = $(this),
                 $field = $(this).parents('fieldset');
-            var thumbnail = $(this).data('preview-thumbnail');
+            var thumbnail = $(this).data('preview-thumbnail'),
+                position = $(this).data('preview-position');
 
             $(this).on('mouseover', function(){
 
@@ -95,7 +96,7 @@ jQuery(document).ready(function(){
                 }
 
                 $this.addClass('active');
-                $field.append('<span class="wpzoom-rcb-field-preview-thumbnail"><img src="'+ thumbnail +'" width="400" height="300"></span>');
+                $field.append('<span class="wpzoom-rcb-field-preview-thumbnail preview-position-'+ position +'"><img src="'+ thumbnail +'" width="400" height="300"></span>');
 
                 $('.wpzoom-rcb-field-preview').not(this).parent().find('.wpzoom-rcb-field-preview-thumbnail').remove();
                 $('.wpzoom-rcb-field-preview').not(this).removeClass('active');

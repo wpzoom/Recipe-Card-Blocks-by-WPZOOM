@@ -290,6 +290,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show course by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'bottom',
 								)
 							),
 							array(
@@ -302,6 +303,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show cuisine by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'bottom',
 								)
 							),
 							array(
@@ -314,6 +316,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show difficulty by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'bottom',
 								)
 							),
 							array(
@@ -326,6 +329,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show author by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'bottom',
 								)
 							),
 							array(
@@ -427,6 +431,7 @@ class WPZOOM_Settings {
 									'disabled'		=> true,
 									'badge' 		=> $premium_badge,
 									'preview'		=> true,
+									'preview_pos'	=> 'bottom',
 								)
 							),
 						)
@@ -447,6 +452,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show servings by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'bottom',
 								)
 							),
 							array(
@@ -459,6 +465,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show preparation time by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'top',
 								)
 							),
 							array(
@@ -471,6 +478,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show cooking time by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'top',
 								)
 							),
 							array(
@@ -483,6 +491,7 @@ class WPZOOM_Settings {
 									'description' 	=> esc_html__( 'Show calories by default', 'wpzoom-recipe-card' ),
 									'default'		=> true,
 									'preview'		=> true,
+									'preview_pos'	=> 'top',
 								)
 							),
 						)

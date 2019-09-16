@@ -97,15 +97,17 @@ class WPZOOM_Settings_Fields {
             <?php if ( $has_preview ): ?>
 
                 <?php
-                $filename = WPZOOM_RCB_PLUGIN_DIR . 'dist/assets/images/previews/' . esc_attr( $args['label_for'] ) . '.png';
-                $preview_thumbnail_url = untrailingslashit( WPZOOM_RCB_PLUGIN_URL ) . '/dist/assets/images/previews/' . esc_attr( $args['label_for'] ) . '.png';
+                $filename 				= WPZOOM_RCB_PLUGIN_DIR . 'dist/assets/images/previews/' . esc_attr( $args['label_for'] ) . '.png';
+                $preview_position 		= isset( $args['preview_pos'] ) ? $args['preview_pos'] : 'right';
+                $preview_thumbnail_url 	= untrailingslashit( WPZOOM_RCB_PLUGIN_URL ) . '/dist/assets/images/previews/' . esc_attr( $args['label_for'] ) . '.png';
 
                 if ( file_exists( $filename ) ) {
                     printf(
-                        '<span class="wpzoom-rcb-field-preview dashicons dashicons-visibility" data-preview-thumbnail="%s" title="%s"></span>',
+                        '<span class="wpzoom-rcb-field-preview dashicons dashicons-visibility" data-preview-position="%s" data-preview-thumbnail="%s" title="%s"></span>',
+                        $preview_position,
                         $preview_thumbnail_url,
                         esc_html__( 'Preview', 'wpzoom-recipe-card' )
-                    );    
+                    );
                 }
                 ?>
 
